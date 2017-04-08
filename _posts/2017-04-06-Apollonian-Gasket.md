@@ -6,17 +6,21 @@ structures that consist of infinitely many levels, each of which is self-similar
 ## Constructing the 0th layer of the gasket
 
 In either paradigm, the first stage of the gasket involves plotting $n_{zero}$ circles, the first of which contains all of the circles within the structure. The radius of the 0th circle on the 0th level of the gasket may be specified or may without loss of generality be assumed to be equal to 1. Assume that the 0th circle on the 0th level of the gasket has radius $R$. The remaining $n_{zero}-1$ consecutive circles on the 0th level are tangent to each other and the circle that contains them. In fact, each of the $n_{zero}-1$ circles inhabit contiguous sectors of the 0th circle; the angle defining each of the sectors is given by
+
 $$\begin{align*}
 2\alpha&=\frac{2\pi}{n_{zero}-1}.
 \end{align*}$$
+
 Consider the first circle on the 0th level, contained in a sector (any sector may be chosen initially) defined by the angle $2\alpha$. 
-The line bisecting the circle makes an angle of $\alpha$ with the first line that defines the sector. Defining the radius of the first circle as $r$, it follows from trigonometric identities that:
-$${align*}{
+The line bisecting the circle makes an angle of $\alpha$ with the first line that defines the sector. Defining the radius of the first circle as $r$, it follows from trigonometric identities that
+
+$$\begin{align*}
 \frac{r}{R-r}&=\sin\alpha\\
 r&=R\sin\alpha-r\sin\alpha\\
 r\left(1+\sin\alpha\right)&=R\sin\alpha\\
 r&=\frac{R\sin\alpha}{1+\sin\alpha}
-}$$
+\end{align*}$$
+
 The practical implication is that after any line defining the radius $R$ of the 0th circle is chosen, the center of the first circle 
 is positioned a distance of $R-r$ units away from the center of the 0th circle. The first circle has been shown to have radius $r$. 
 The remaining $n_{zero}-2$ circles on the 0th level are given by rotating the first circle by an angle of $2\alpha$ 
@@ -37,9 +41,11 @@ In general, when constructing the $n$th layer, a method for constructing inverse
 constructed from triples of inverse points. To obtain the triple of inverse points, a triple is chosen on one of the circles on layer $n$. 
 Each of these points is then inverted with respect to the appropriate reference circle. For each of the points $\boldsymbol{x}$, the 
 inverse point is obtained according to
-$${align*}{
+
+$$\begin{align*}
 \boldsymbol{x}'&=\boldsymbol{x_0}+\frac{r^2(\boldsymbol{x}-\boldsymbol{x_0})}{|\boldsymbol{x}-\boldsymbol{x_0}|^2},
-}$$
+\end{align*}$$
+
 where $\boldsymbol{x}'$ defines the inverse point, $\boldsymbol{x_0}$ defines the center of the reference circle and $r$ defines the radius of the reference 
 circle. The figure below plots the first level of the gasket previously displayed: four inverse circles are calculated relative to the 
 reference circles.
