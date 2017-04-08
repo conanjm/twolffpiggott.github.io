@@ -54,5 +54,11 @@ $$
 		\ldots&\ldots&\ldots&\ldots\\
 		y_Ny_1x_N^\top x_1&y_Ny_2x_N^\top x_2&\ldots& y_Ny_Nx_N^\top x_N\\
 \end{bmatrix}
+&=
+\begin{bmatrix}
+    x_{11} & \cdots & x_{N1}\\
+    \vdots & \ddots & \vdots\\
+    x_{1D} & \cdots & x_{ND}\\
+\end{bmatrix}
 \end{align*}
 $$
