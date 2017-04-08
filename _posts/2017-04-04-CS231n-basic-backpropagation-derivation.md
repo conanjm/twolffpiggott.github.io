@@ -49,10 +49,7 @@ $$
 $$
 \begin{align*}
 \begin{bmatrix}
-    y_1y_1x_1^\top x_1&y_1y_2x_1^\top x_2&\ldots& y_1y_Nx_1^\top x_N\\
-		y_2y_1x_2^\top x_1&y_2y_2x_1^\top x_2&\ldots& y_2y_Nx_2^\top x_N\\
-		\ldots&\ldots&\ldots&\ldots\\
-		y_Ny_1x_N^\top x_1&y_Ny_2x_N^\top x_2&\ldots& y_Ny_Nx_N^\top x_N\\
+    \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_1}\boldsymbol{x_i} & \cdots & \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_K}\boldsymbol{x_i}\\
 \end{bmatrix}
 &=
 \begin{bmatrix}
