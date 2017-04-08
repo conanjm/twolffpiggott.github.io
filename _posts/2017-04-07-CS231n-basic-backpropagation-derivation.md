@@ -40,7 +40,7 @@ $$
 \end{align}
 $$
 
-which follows as the $j$th score is the only score where the vector $\boldsymbol{w_j}$ arises, and so the derivatives of the other scores with respect to $\boldsymbol{w_j}$ are all zero. Then, the total loss $\mathcal{L}$ is obtained as the summation of the losses across all $N$ observations, and so
+which follows from the derivative $\frac{\partial f_k}{\partial \boldsymbol{w_j}} = \boldsymbol{x_j}\mathbb{1}\left(j=k\right)$. The $j$th score is the only score where the vector $\boldsymbol{w_j}$ arises, and so the derivatives of the other scores with respect to $\boldsymbol{w_j}$ are all zero. The total loss $\mathcal{L}$ is obtained as the summation of the losses across all $N$ observations, and so
 
 $$
 \begin{align*}
