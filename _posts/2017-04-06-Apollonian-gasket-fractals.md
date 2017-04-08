@@ -1,3 +1,7 @@
+---
+layout: post
+title: CS231n Backpropagation for Convolutional Neural Network
+---
 An Apollonian gasket is a fractal comprising successive layers of tangential but strictly non-intersecting circles, in which a relationship 
 of triples of circles is essential. For the purposes of the implementation, an Appolonian gasket is completely specified by the 
 number of circles at the 0th level of the gasket and number of levels of the gasket; in their theoretical conception, gaskets are 
