@@ -33,3 +33,5 @@ we're interested in deriving the derivative of the loss with respect to the weig
 $$
 \begin{align}
 \frac{\partial\mathcal{L}_i}{\partial \boldsymbol{w_j}} &= \sum_{k=1}^K \frac{\partial\mathcal{L}_i}{\partial f_k}\times\frac{\partial f_k}{\partial \boldsymbol{w_j}}
+\end{align}
+$$
