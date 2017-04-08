@@ -2,6 +2,8 @@
 layout: post
 title: CS231n basic backpropagation derivation
 ---
+This post briefly covers the backpropagation derivation for an affine layer in a basic fully-connected neural network, in the context of the second assignment for the Winter 2016 iteration of the Stanford class [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/index.html).
+
 Consider the loss function for the net evaluated at the $i$th observation
 
 $$
