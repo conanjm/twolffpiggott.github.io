@@ -28,7 +28,7 @@ $$
 \end{align}
 $$
 
-we're interested in deriving the derivative of the loss with respect to the weights and biases. Starting with the weights, we can use the chain rule to get to the desired derivative via the derivatives of the loss with respect to the scores. 
+we're interested in deriving the derivative of the loss with respect to the weights and biases. Starting with the weights, we can use the chain rule to get to the desired derivative via the derivatives of the loss with respect to the scores 
 
 $$
 \begin{align}
