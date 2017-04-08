@@ -57,5 +57,11 @@ $$
     \vdots & \ddots & \vdots\\
     x_{1D} & \cdots & x_{ND}\\
 \end{bmatrix}
+\times
+\begin{bmatrix}
+    \frac{\partial\mathcal{L}_1}{\partial f_1} & \cdots & \frac{\partial\mathcal{L}_1}{\partial f_K}\\
+    \vdots & \ddots & \vdots\\
+    \frac{\partial\mathcal{L}_N}{\partial f_1} & \cdots & \frac{\partial\mathcal{L}_N}{\partial f_K}\\
+\end{bmatrix}
 \end{align*}
 $$
