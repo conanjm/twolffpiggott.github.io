@@ -37,3 +37,4 @@ $$
 &= \frac{\partial\mathcal{L}_i}{\partial f_j}\boldsymbol{x_i}\\
 \end{align}
 $$
+which follows as the $j$th score is the only score where the vector $\boldsymbol{w_j}$ arises, and so the derivatives of the other scores with respect to $\boldsymbol{w_j}$ are all zero.
