@@ -85,6 +85,24 @@ The derivative of the loss across all observations is again obtained via summati
 $$
 \begin{align*}
 \frac{\partial\mathcal{L}}{\partial \beta_j} &= \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial \beta_j}\\
-&= \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_j}.
+&= \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_j},
 \end{align*}
 $$
+and therefore 
+
+$$
+\begin{align}
+db &= \begin{bmatrix}
+    \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_1} \\
+    \vdots\\
+    \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_K}\\
+\end{bmatrix}\\
+&=
+\begin{bmatrix}
+    \sum_{i=1}^N dF_{i1} \\
+    \vdots\\
+    \sum_{i=1}^N dF_{iK}\\
+\end{bmatrix}.\\
+\end{align}
+
+A great walkthrough of the implementation is python is available [here](http://cs231n.github.io/neural-networks-case-study/).
