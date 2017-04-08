@@ -73,7 +73,6 @@ $$
 The derivative of the loss with respect to the biases is obtained similarly. Again using the chain rule,
 
 $$
-$$
 \begin{align}
 \frac{\partial\mathcal{L}_i}{\partial \beta_j} &= \sum_{k=1}^K \frac{\partial\mathcal{L}_i}{\partial f_k}\times\frac{\partial f_k}{\partial \beta_j}\\
 &= \frac{\partial\mathcal{L}_i}{\partial f_j}\times\frac{\partial f_j}{\partial \beta_j}\\
