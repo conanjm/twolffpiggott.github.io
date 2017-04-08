@@ -2,9 +2,8 @@
 layout: post
 title: Backpropagation for Convolutional Neural Network
 ---
-This post is a follow-up on the second assignment proposed as part of the Stanford CS class CS231n: Convolutional Neural Networks for Visual Recognition.
-[I'm an inline-style link](https://www.google.com)
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+This post covers briefly backpropagation for a convolutional neural network, from  the second assignment proposed as part of the Stanford class [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/index.html).
+
 $$ \begin{equation} \frac{d\mathcal{L}}{dh} = \begin{pmatrix} \frac{d\mathcal{L}}{dh_{11}} & .. & \frac{d\mathcal{L}}{dh_{1H}} \ .. & \frac{d\mathcal{L}}{dh_{kl}} & .. \ \frac{d\mathcal{L}}{dh_{N1}} & ... & \frac{d\mathcal{L}}{dh_{NH}} \end{pmatrix}. \end{equation} $$
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
