@@ -2,7 +2,7 @@
 layout: post
 title: Backpropagation for Convolutional Neural Network
 ---
-This post covers briefly backpropagation for a convolutional neural network, from  the second assignment proposed as part of the Stanford class [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/index.html).
+This post briefly covers backpropagation for a convolutional neural network, derived in the context of work on the second assignment for the Winter 2016 iteration of the Stanford class [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/index.html).
 
 $$ \begin{equation} \frac{d\mathcal{L}}{dh} = \begin{pmatrix} \frac{d\mathcal{L}}{dh_{11}} & .. & \frac{d\mathcal{L}}{dh_{1H}} \ .. & \frac{d\mathcal{L}}{dh_{kl}} & .. \ \frac{d\mathcal{L}}{dh_{N1}} & ... & \frac{d\mathcal{L}}{dh_{NH}} \end{pmatrix}. \end{equation} $$
 
