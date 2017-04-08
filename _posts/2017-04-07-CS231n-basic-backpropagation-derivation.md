@@ -104,5 +104,6 @@ db &= \begin{bmatrix}
     \sum_{i=1}^N dF_{iK}\\
 \end{bmatrix}.\\
 \end{align}
+$$
 
 A great walkthrough of the implementation is python is available [here](http://cs231n.github.io/neural-networks-case-study/).
