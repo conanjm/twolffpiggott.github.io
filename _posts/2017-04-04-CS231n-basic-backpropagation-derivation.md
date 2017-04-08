@@ -23,5 +23,7 @@ and $f_j = \boldsymbol{w_j}^\top \boldsymbol{x_i} + b_j$ is the score of the $i$
 Given the upstream derivative of the loss with respect to the scores
 
 $$
+\begin{align}
 \frac{\partial\mathcal{L}_i}{\partial f_k} &= p_k - \mathbbm{1}
+\end{align}
 $$
