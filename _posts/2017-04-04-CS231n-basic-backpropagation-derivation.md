@@ -37,4 +37,12 @@ $$
 &= \frac{\partial\mathcal{L}_i}{\partial f_j}\boldsymbol{x_i}\\
 \end{align}
 $$
-which follows as the $j$th score is the only score where the vector $\boldsymbol{w_j}$ arises, and so the derivatives of the other scores with respect to $\boldsymbol{w_j}$ are all zero.
+
+which follows as the $j$th score is the only score where the vector $\boldsymbol{w_j}$ arises, and so the derivatives of the other scores with respect to $\boldsymbol{w_j}$ are all zero. Then, the total loss $\mathcal{L}$ is obtained as the summation of the losses across all $N$ observations, and so
+
+$$
+\begin{align*}
+\frac{\partial\mathcal{L}}{\partial \boldsymbol{w_j}} &= \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_j}\boldsymbol{x_i}
+\end{align*}
+$$
+
