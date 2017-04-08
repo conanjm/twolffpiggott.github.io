@@ -11,8 +11,8 @@ In either paradigm, the first stage of the gasket involves plotting $n_{zero}$ c
 $${align*}{
 2\alpha&=\frac{2\pi}{n_{zero}-1}.
 }$$
-Consider the first circle on the 0th level, contained in a sector (any sector may be chosen initially) defined by the angle \f$2\alpha\f$. 
-The line bisecting the circle makes an angle of \f$\alpha\f$ with the first line that defines the sector. Defining the radius of the first circle as $r$, it follows from trigonometric identities that:
+Consider the first circle on the 0th level, contained in a sector (any sector may be chosen initially) defined by the angle $2\alpha$. 
+The line bisecting the circle makes an angle of $\alpha$ with the first line that defines the sector. Defining the radius of the first circle as $r$, it follows from trigonometric identities that:
 $${align*}{
 \frac{r}{R-r}&=\sin\alpha\\
 r&=R\sin\alpha-r\sin\alpha\\
@@ -27,29 +27,24 @@ consecutive times; each consecutive circle has a radius of $r$. The figure below
 ## Constructing the reference circles
 Once the 0th level of the gasket has been populated, $n_{zero}$ reference circles are defined, which form a crucial part of the algrithm for creating Apollonian 
 gaskets. The 0th reference circle passes through the each point of tangency of the inner circles $1,\ldots,n_{zero}-1$. It is sufficient to 
-consider any three of these points to completely specify the 0th reference circle. The remaining \f$n_{zero}-1\f$ reference circles are 
+consider any three of these points to completely specify the 0th reference circle. The remaining \f$n_{zero}-1$ reference circles are 
 constructed by considering each pair of consecutive inner circles. The point of tangency between the pair and of each member of the pair 
 with the 0th circle on level 0 (the containing circle) define a triple of points from which the reference circle can be constructed. 
 The figure below gives the plots the reference circles for the gasket specification in the preceding figure. 
 <img src="../ref.png" width="500" height="500" />
 ## Populating consecutive layers of the gasket
-The \f$n_{zero}\f$ reference circles are integral to the population of each successive layer of the gasket. The circles on the \f$n\f$th layer of the 
-gasket are found by constructing the inverse circles of the each of the circles on the \f$\left(n-1\right)\f$th layer of the gasket with respect to the reference circles 
-with which the circles on the \f$\left(n-1\right)\f$ layer have empty intersection. There is a special case in the construction of the 
-first layer of the gasket, where the 0th circle completely contains the first reference circle. For this case, the inverse circle of the 0th circle on the 
-0th level with respect to the 0th reference circle needs to be found.
+The $n_{zero}$ reference circles are integral to the population of each successive layer of the gasket. The circles on the $n$th layer of the gasket are found by constructing the inverse circles of the each of the circles on the $\left(n-1\right)$th layer of the gasket with respect to the reference circles with which the circles on the $\left(n-1\right)$ layer have empty intersection. There is a special case in the construction of the first layer of the gasket, where the 0th circle completely contains the first reference circle. For this case, the inverse circle of the 0th circle on the 0th level with respect to the 0th reference circle needs to be found.
 
-In general, when constructing the \f$n\f$th layer, a method for constructing inverse circles needs to be defined. Inverse circles are 
-constructed from triples of inverse points. To obtain the triple of inverse points, a triple is chosen on one of the circles on layer \f$n\f$. 
-Each of these points is then inverted with respect to the appropriate reference circle. For each of the points \f$\boldsymbol{x}\f$, the 
-inverse point is obtained according to:
-\f{align*}{
-\boldsymbol{x}'&=\boldsymbol{x_0}+\frac{r^2(\boldsymbol{x}-\boldsymbol{x_0})}{|\boldsymbol{x}-\boldsymbol{x_0}|^2}
-\f}
-\f$\boldsymbol{x}'\f$ defines the inverse point; \f$\boldsymbol{x_0}\f$ defines the center of the reference circle and \f$r\f$ defines the radius of the reference 
+In general, when constructing the $n$th layer, a method for constructing inverse circles needs to be defined. Inverse circles are 
+constructed from triples of inverse points. To obtain the triple of inverse points, a triple is chosen on one of the circles on layer $n$. 
+Each of these points is then inverted with respect to the appropriate reference circle. For each of the points $\boldsymbol{x}$, the 
+inverse point is obtained according to
+$${align*}{
+\boldsymbol{x}'&=\boldsymbol{x_0}+\frac{r^2(\boldsymbol{x}-\boldsymbol{x_0})}{|\boldsymbol{x}-\boldsymbol{x_0}|^2},
+}$$
+where $\boldsymbol{x}'$ defines the inverse point, $\boldsymbol{x_0}$ defines the center of the reference circle and $r$ defines the radius of the reference 
 circle. The figure below plots the first level of the gasket previously displayed: four inverse circles are calculated relative to the 
 reference circles.
 <img src="../ref_lvl1.png" width="500" height="500" />
-This process iterates, and for each level \f$n\f$, inverse circles are obtained for only for circles at the \f$\left(n-1\right)\f$th level, with respect 
-to the appropriate reference circles. The figure below plots three levels of the gasket, without reference circles.
+This process iterates, and for each level $n$, inverse circles are obtained for only for circles at the $\left(n-1\right)$th level, with respect to the appropriate reference circles. The figure below plots three levels of the gasket, without reference circles.
 <img src="../crude_gasket.png" width="500" height="500" />
