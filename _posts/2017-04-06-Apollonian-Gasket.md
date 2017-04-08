@@ -6,9 +6,9 @@ structures that consist of infinitely many levels, each of which is self-similar
 ## Constructing the 0th layer of the gasket
 
 In either paradigm, the first stage of the gasket involves plotting $n_{zero}$ circles, the first of which contains all of the circles within the structure. The radius of the 0th circle on the 0th level of the gasket may be specified or may without loss of generality be assumed to be equal to 1. Assume that the 0th circle on the 0th level of the gasket has radius $R$. The remaining $n_{zero}-1$ consecutive circles on the 0th level are tangent to each other and the circle that contains them. In fact, each of the $n_{zero}-1$ circles inhabit contiguous sectors of the 0th circle; the angle defining each of the sectors is given by
-$${align*}{
+$$\begin{align*}
 2\alpha&=\frac{2\pi}{n_{zero}-1}.
-}$$
+\end{align*}$$
 Consider the first circle on the 0th level, contained in a sector (any sector may be chosen initially) defined by the angle $2\alpha$. 
 The line bisecting the circle makes an angle of $\alpha$ with the first line that defines the sector. Defining the radius of the first circle as $r$, it follows from trigonometric identities that:
 $${align*}{
