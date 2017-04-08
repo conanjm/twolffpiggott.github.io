@@ -88,6 +88,7 @@ $$
 &= \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_j},
 \end{align*}
 $$
+
 and therefore 
 
 $$
@@ -96,8 +97,8 @@ db &= \begin{bmatrix}
     \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_1} \\
     \vdots\\
     \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_K}\\
-\end{bmatrix}\\
-&=
+\end{bmatrix}
+=
 \begin{bmatrix}
     \sum_{i=1}^N dF_{i1} \\
     \vdots\\
