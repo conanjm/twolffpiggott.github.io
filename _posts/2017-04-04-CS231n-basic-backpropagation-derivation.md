@@ -63,6 +63,7 @@ $$
     \frac{\partial\mathcal{L}_1}{\partial f_1} & \cdots & \frac{\partial\mathcal{L}_1}{\partial f_K}\\
     \vdots & \ddots & \vdots\\
     \frac{\partial\mathcal{L}_N}{\partial f_1} & \cdots & \frac{\partial\mathcal{L}_N}{\partial f_K}\\
-\end{bmatrix}
+\end{bmatrix}\\
+dW &= X\top dF
 \end{align*}
 $$
