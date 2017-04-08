@@ -8,7 +8,7 @@ Consider the loss function for the net evaluated at the $i$th observation
 
 $$
 \begin{align}
-\mathcal{L}_i &= \log\left(p_{y_i}\right),
+\mathcal{L}_i &= - \log\left(p_{y_i}\right),
 \end{align}
 $$
 
