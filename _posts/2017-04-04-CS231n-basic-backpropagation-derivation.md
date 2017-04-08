@@ -64,6 +64,6 @@ $$
     \vdots & \ddots & \vdots\\
     \frac{\partial\mathcal{L}_N}{\partial f_1} & \cdots & \frac{\partial\mathcal{L}_N}{\partial f_K}\\
 \end{bmatrix}\\
-dW &= X\top dF
+dW &= X^\top dF
 \end{align*}
 $$
