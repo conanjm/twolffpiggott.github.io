@@ -24,6 +24,6 @@ Given the upstream derivative of the loss with respect to the scores
 
 $$
 \begin{align}
-\frac{\partial\mathcal{L}_i}{\partial f_k} &= p_k - \mathbbm{1}
+\frac{\partial\mathcal{L}_i}{\partial f_k} &= p_k - \mathbb{1}
 \end{align}
 $$
