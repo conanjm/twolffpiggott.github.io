@@ -50,5 +50,5 @@ where $\boldsymbol{x}'$ defines the inverse point, $\boldsymbol{x_0}$ defines th
 circle. The figure below plots the first level of the gasket previously displayed: four inverse circles are calculated relative to the 
 reference circles.
 ![_config.yml]({{ site.baseurl }}/images/ref_lvl1.png)
-This process iterates, and for each level $n$, inverse circles are obtained for only for circles at the $\left(n-1\right)$th level, with respect to the appropriate reference circles. The figure below plots three levels of the gasket, without reference circles.
+This process iterates, and for each level $n$, inverse circles are obtained for only for circles at the $\left(n-1\right)$th level, with respect to the appropriate reference circles. The figure below plots three levels of the gasket, without reference circles. The full implementation of this Apollonian gasket visualisation is available [here](https://github.com/twolffpiggott/C-Apollonian-Gasket)
 ![_config.yml]({{ site.baseurl }}/images/crude_gasket.png)
