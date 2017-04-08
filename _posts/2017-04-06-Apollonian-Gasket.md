@@ -2,7 +2,7 @@ An Apollonian gasket is a fractal comprising successive layers of tangential but
 of triples of circles is essential. For the purposes of the implementation, an Appolonian gasket is completely specified by the 
 number of circles at the 0th level of the gasket and number of levels of the gasket; in their theoretical conception, gaskets are 
 structures that consist of infinitely many levels, each of which is self-similar. 
-
+![_config.yml]({{ site.baseurl }}/images/val_6_7.png)
 ## Constructing the 0th layer of the gasket
 
 In either paradigm, the first stage of the gasket involves plotting $n_{zero}$ circles, the first of which contains all of the circles within the structure. The radius of the 0th circle on the 0th level of the gasket may be specified or may without loss of generality be assumed to be equal to 1. Assume that the 0th circle on the 0th level of the gasket has radius $R$. The remaining $n_{zero}-1$ consecutive circles on the 0th level are tangent to each other and the circle that contains them. In fact, each of the $n_{zero}-1$ circles inhabit contiguous sectors of the 0th circle; the angle defining each of the sectors is given by
@@ -18,7 +18,7 @@ $$\begin{align*}
 \frac{r}{R-r}&=\sin\alpha\\
 r&=R\sin\alpha-r\sin\alpha\\
 r\left(1+\sin\alpha\right)&=R\sin\alpha\\
-r&=\frac{R\sin\alpha}{1+\sin\alpha}
+r&=\frac{R\sin\alpha}{1+\sin\alpha}.
 \end{align*}$$
 
 The practical implication is that after any line defining the radius $R$ of the 0th circle is chosen, the center of the first circle 
