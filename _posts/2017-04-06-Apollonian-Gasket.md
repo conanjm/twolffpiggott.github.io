@@ -29,7 +29,7 @@ consecutive times; each consecutive circle has a radius of $r$. The figure below
 ## Constructing the reference circles
 Once the 0th level of the gasket has been populated, $n_{zero}$ reference circles are defined, which form a crucial part of the algrithm for creating Apollonian 
 gaskets. The 0th reference circle passes through the each point of tangency of the inner circles $1,\ldots,n_{zero}-1$. It is sufficient to 
-consider any three of these points to completely specify the 0th reference circle. The remaining \f$n_{zero}-1$ reference circles are 
+consider any three of these points to completely specify the 0th reference circle. The remaining $n_{zero}-1$ reference circles are 
 constructed by considering each pair of consecutive inner circles. The point of tangency between the pair and of each member of the pair 
 with the 0th circle on level 0 (the containing circle) define a triple of points from which the reference circle can be constructed. 
 The figure below gives the plots the reference circles for the gasket specification in the preceding figure. 
