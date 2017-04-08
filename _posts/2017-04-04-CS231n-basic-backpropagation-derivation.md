@@ -14,11 +14,11 @@ where $p_{y_i}$ is the vector of normalised probabilities
 
 $$
 \begin{align}
-p_{y_i} &= \frac{e^{f_{y_i}}}{\sum_{j=1}^K e^{f_j}}
+p_{y_i} &= \frac{e^{f_{y_i}}}{\sum_{j=1}^K e^{f_j}},
 \end{align}
 $$
 
-and $f_j = \boldsymbol{w_j}^\top \boldsymbol{x_i} + b_j$ is the score of the $i$th observation corresponding to the $j$th class.
+$f_j = \boldsymbol{w_j}^\top \boldsymbol{x_i} + b_j$ is the score of the $i$th observation corresponding to the $j$th class, \boldsymbol{x_i} is the column vector corresponding to the $i$th observation, and $\boldsymbol{w_j}$ is the column vector corresponding to the weights for the $j$th class.
 
 Given the upstream derivative of the loss with respect to the scores
 
