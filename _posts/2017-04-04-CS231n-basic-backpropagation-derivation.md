@@ -17,6 +17,6 @@ p_{y_i} &= \frac{e^{f_{y_i}}}{\sum_{j=1}^K e^{f_j}}
 \end{align}
 $$
 
-and $f_j = \bm{w_j}^\top \bm{x_i} + b_j$ is the score of the $i$th observation corresponding to the $j$th class.
+and $f_j = \boldsymbol{w_j}^\top \boldsymbol{x_i} + b_j$ is the score of the $i$th observation corresponding to the $j$th class.
 
 
