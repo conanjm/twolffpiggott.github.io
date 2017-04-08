@@ -20,4 +20,8 @@ $$
 
 and $f_j = \boldsymbol{w_j}^\top \boldsymbol{x_i} + b_j$ is the score of the $i$th observation corresponding to the $j$th class.
 
+Given the upstream derivative of the loss with respect to the scores
 
+$$
+\frac{\partial\mathcal{L}_i}{\partial f_k} &= p_k - \mathbbm{1}
+$$
