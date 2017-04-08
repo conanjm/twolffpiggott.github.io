@@ -42,10 +42,11 @@ which follows as the $j$th score is the only score where the vector $\boldsymbol
 
 $$
 \begin{align*}
-\frac{\partial\mathcal{L}}{\partial \boldsymbol{w_j}} &= \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_j}\boldsymbol{x_i}
+\frac{\partial\mathcal{L}}{\partial \boldsymbol{w_j}} &= \sum_{i=1}^N \frac{\partial\mathcal{L}_i}{\partial f_j}\boldsymbol{x_i}.
 \end{align*}
 $$
 
+This matrix of the derivatives of the loss with respect to the weights is simply obtained as the matrix product of the observation matrix and the matrix of the derivatives of the loss with respect to the scores
 $$
 \begin{align*}
 \begin{bmatrix}
