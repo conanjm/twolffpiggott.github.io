@@ -36,7 +36,7 @@ $$
 \begin{align}
 \frac{\partial\mathcal{L}_i}{\partial \boldsymbol{w_j}} &= \sum_{k=1}^K \frac{\partial\mathcal{L}_i}{\partial f_k}\times\frac{\partial f_k}{\partial \boldsymbol{w_j}}\\
 &= \frac{\partial\mathcal{L}_i}{\partial f_j}\times\frac{\partial f_j}{\partial \boldsymbol{w_j}}\\
-&= \frac{\partial\mathcal{L}_i}{\partial f_j}\boldsymbol{x_i}\\
+&= \frac{\partial\mathcal{L}_i}{\partial f_j}\boldsymbol{x_i},\\
 \end{align}
 $$
 
@@ -76,11 +76,11 @@ $$
 \begin{align}
 \frac{\partial\mathcal{L}_i}{\partial b_j} &= \sum_{k=1}^K \frac{\partial\mathcal{L}_i}{\partial f_k}\times\frac{\partial f_k}{\partial b_j}\\
 &= \frac{\partial\mathcal{L}_i}{\partial f_j}\times\frac{\partial f_j}{\partial b_j}\\
-&= \frac{\partial\mathcal{L}_i}{\partial f_j}\times 1.\\
+&= \frac{\partial\mathcal{L}_i}{\partial f_j}\times 1,\\
 \end{align}
 $$
 
-The derivative of the loss across all observations is again obtained via summation 
+which follows from the derivative $\frac{\partial f_k}{\partial \boldsymbol{b_j}} = \mathbb{1}\left(j=k\right)$. The derivative of the loss across all observations is again obtained via summation 
 
 $$
 \begin{align*}
