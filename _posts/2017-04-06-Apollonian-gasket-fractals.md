@@ -2,6 +2,8 @@
 layout: post
 title: Apollonian gasket fractals
 ---
+This post gives an outline of the algorithm used to construct an Apollonian gaskel fractal. The full implementation of this Apollonian gasket algorithm and visualisation in C++ is available [here](https://github.com/twolffpiggott/C-Apollonian-Gasket).
+
 An Apollonian gasket is a fractal comprising successive layers of tangential but strictly non-intersecting circles, in which a relationship 
 of triples of circles is essential. For the purposes of the implementation, an Appolonian gasket is completely specified by the 
 number of circles at the 0th level of the gasket and number of levels of the gasket; in their theoretical conception, gaskets are 
@@ -54,5 +56,5 @@ where $\boldsymbol{x}'$ defines the inverse point, $\boldsymbol{x_0}$ defines th
 circle. The figure below plots the first level of the gasket previously displayed: four inverse circles are calculated relative to the 
 reference circles.
 ![_config.yml]({{ site.baseurl }}/images/ref_lvl1.png)
-This process iterates, and for each level $n$, inverse circles are obtained for only for circles at the $\left(n-1\right)$th level, with respect to the appropriate reference circles. The figure below plots three levels of the gasket, without reference circles. The full implementation of this Apollonian gasket visualisation in C++ is available [here](https://github.com/twolffpiggott/C-Apollonian-Gasket).
+This process iterates, and for each level $n$, inverse circles are obtained for only for circles at the $\left(n-1\right)$th level, with respect to the appropriate reference circles. The figure below plots three levels of the gasket, without reference circles.
 ![_config.yml]({{ site.baseurl }}/images/crude_gasket.png)
