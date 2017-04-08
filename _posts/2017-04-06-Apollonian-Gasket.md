@@ -1,5 +1,3 @@
-# Discussion of theory
-
 An Apollonian gasket is a fractal comprising successive layers of tangential but strictly non-intersecting circles, in which a relationship 
 of triples of circles is essential. For the purposes of the implementation, an Appolonian gasket is completely specified by the 
 number of circles at the 0th level of the gasket and number of levels of the gasket; in their theoretical conception, gaskets are 
@@ -31,7 +29,7 @@ consider any three of these points to completely specify the 0th reference circl
 constructed by considering each pair of consecutive inner circles. The point of tangency between the pair and of each member of the pair 
 with the 0th circle on level 0 (the containing circle) define a triple of points from which the reference circle can be constructed. 
 The figure below gives the plots the reference circles for the gasket specification in the preceding figure. 
-<img src="../ref.png" width="500" height="500" />
+![_config.yml]({{ site.baseurl }}/images/ref.png)
 ## Populating consecutive layers of the gasket
 The $n_{zero}$ reference circles are integral to the population of each successive layer of the gasket. The circles on the $n$th layer of the gasket are found by constructing the inverse circles of the each of the circles on the $\left(n-1\right)$th layer of the gasket with respect to the reference circles with which the circles on the $\left(n-1\right)$ layer have empty intersection. There is a special case in the construction of the first layer of the gasket, where the 0th circle completely contains the first reference circle. For this case, the inverse circle of the 0th circle on the 0th level with respect to the 0th reference circle needs to be found.
 
@@ -45,6 +43,6 @@ $${align*}{
 where $\boldsymbol{x}'$ defines the inverse point, $\boldsymbol{x_0}$ defines the center of the reference circle and $r$ defines the radius of the reference 
 circle. The figure below plots the first level of the gasket previously displayed: four inverse circles are calculated relative to the 
 reference circles.
-<img src="../ref_lvl1.png" width="500" height="500" />
+![_config.yml]({{ site.baseurl }}/images/ref_lvl1.png)
 This process iterates, and for each level $n$, inverse circles are obtained for only for circles at the $\left(n-1\right)$th level, with respect to the appropriate reference circles. The figure below plots three levels of the gasket, without reference circles.
-<img src="../crude_gasket.png" width="500" height="500" />
+![_config.yml]({{ site.baseurl }}/images/crude_gasket.png)
