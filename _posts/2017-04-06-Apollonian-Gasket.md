@@ -23,7 +23,7 @@ The practical implication is that after any line defining the radius $R$ of the 
 is positioned a distance of $R-r$ units away from the center of the 0th circle. The first circle has been shown to have radius $r$. 
 The remaining $n_{zero}-2$ circles on the 0th level are given by rotating the first circle by an angle of $2\alpha$ 
 consecutive times; each consecutive circle has a radius of $r$. The figure below displays the 0th level of a gasket specified with $n_{zero}=4$. The center of the 0th circle is the origin, and the center of the first circle on the 0th level is given by the point $\left(0,R-r\right)$ (this direction was arbitrary).
-<img src="../lvl0.png" width="500" height="500" />
+![_config.yml]({{ site.baseurl }}/images/lvl0.png)
 ## Constructing the reference circles
 Once the 0th level of the gasket has been populated, $n_{zero}$ reference circles are defined, which form a crucial part of the algrithm for creating Apollonian 
 gaskets. The 0th reference circle passes through the each point of tangency of the inner circles $1,\ldots,n_{zero}-1$. It is sufficient to 
