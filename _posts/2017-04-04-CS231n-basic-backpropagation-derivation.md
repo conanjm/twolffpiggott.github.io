@@ -27,3 +27,9 @@ $$
 \frac{\partial\mathcal{L}_i}{\partial f_k} &= p_k - \mathbb{1}\left(y_i=k\right)
 \end{align}
 $$
+
+we're interested in deriving the derivative of the loss with respect to the weights and biases. Starting with the weights, we can use the can rule to get to the desired derivative via the derivatives of the loss with respect to the scores. 
+
+$$
+\begin{align}
+\frac{\partial\mathcal{L}_i}{\partial \boldsymbol{w_j}} &= \sum_{k=1}^K \frac{\partial\mathcal{L}_i}{\partial f_k}\times\frac{\partial f_k}{\partial \boldsymbol{w_j}}
