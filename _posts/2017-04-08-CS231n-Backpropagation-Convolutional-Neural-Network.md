@@ -23,6 +23,11 @@ The key aim of the backpropagation derivation is to get from the derivative of t
 - $dw$, the derivative of the loss with respect to the weights in the convolutional layer
 - $db$, the derivatives of the loss with respect to the biases in the convolutional layer
 
+Remember, what is happening 
+{% highlight python %}
+output[0, 0, 0, 0] = np.sum(X[0, :, :3, :3] * W[0, :, :, :]) + b[0]
+{% endhighlight %}
+
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 <img src="/images/convolution1.png" width="500">
 
