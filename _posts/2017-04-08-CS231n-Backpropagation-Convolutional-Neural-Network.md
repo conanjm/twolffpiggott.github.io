@@ -10,13 +10,13 @@ Let's first make sense of the upstream derivative. For the convolutional layer, 
 
 $$
 \begin{align}
-H_{out} &= (H−HH+2P)/S+1 && W_{out} &= (W−WW+2P)/S+1\\
-&= (5 - 3 + 2 \times 1)/1 +1 && &= (5 - 3 + 2 \times 1)/1 +1\\
-&= 5 && &= 5.\\
+H_{out} &= (H−HH+2P)/S+1 & W_{out} &= (W−WW+2P)/S+1\\
+&= (5 - 3 + 2 \times 1)/1 +1 & &= (5 - 3 + 2 \times 1)/1 +1\\
+&= 5 & &= 5.\\
 \end{align}
 $$
 
-Therefore, convolving over the input volume with the 
+Therefore, convolving over the input volume with the parameters described above involves taking a 3D dot product of the weights with the input volume at each of the $5 \times 5$ positions of the filter with respect to the input. 
 
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 <img src="/images/convolution1.png" width="500">
