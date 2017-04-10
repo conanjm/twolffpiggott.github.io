@@ -18,7 +18,10 @@ $$
 
 Therefore, convolving over the input volume with the parameters described above involves taking a 3D dot product of the weights with the input volume at each of the $5 \times 5$ positions of the filter with respect to the input. This process is repeated with each of the $F = 2$ different filters, leading to an output volume of size $\left(2, 5, 5\right)$, and for each of the $N = 4$ observations, giving an output tensor $Y = \left(4, 2, 5, 5\right)$. Wonderful! This corresponds, as it should, to the dimensions of our upstream derivative $dY$, which is in fact the derivative of the loss with respect to the output volume of the convolutional layer, $\frac{d\mathcal{L}}{dY}$. 
 
-The key aim of the backpropagation derivation is to get from the 
+The key aim of the backpropagation derivation is to get from the derivative of the loss with respect to the output of the convolutional layer $Y$ to the quantities:
+- $dx$, the derivative of the loss with respect to the input to the convolutional layer
+- $dw$, the derivative of the loss with respect to the weights in the convolutional layer
+- $db$, the derivatives of the loss with respect to the biases in the convolutional layer
 
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 <img src="/images/convolution1.png" width="500">
