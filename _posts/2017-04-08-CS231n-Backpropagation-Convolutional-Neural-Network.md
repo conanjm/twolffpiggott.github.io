@@ -29,5 +29,5 @@ output[0, 0, 0, 0] = np.sum(X[0, :, :3, :3] * W[0, :, :, :]) + b[0]
 {% endhighlight %}
 
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
-<img src="/images/convolution1.png" width="500">
+<img src="/images/convolution_basic.png" width="500">
 
