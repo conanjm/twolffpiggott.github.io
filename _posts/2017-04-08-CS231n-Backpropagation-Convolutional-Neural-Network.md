@@ -10,11 +10,14 @@ Let's first make sense of the upstream derivative. For the convolutional layer, 
 
 $$
 \begin{align}
-H_{out} = (H−HH+2P)/S+1 && W_{out} = (W−WW+2P)/S+1\\
-= (5 - 3 + 2 \times 1)/1 +1 && = (5 - 3 + 2 \times 1)/1 +1
-= 5 && = 5\\
+H_{out} &= (H−HH+2P)/S+1 && W_{out} &= (W−WW+2P)/S+1\\
+&= (5 - 3 + 2 \times 1)/1 +1 && &= (5 - 3 + 2 \times 1)/1 +1\\
+&= 5 && &= 5.\\
 \end{align}
 $$
+
+Therefore, convolving over the input volume with the 
+
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 <img src="/images/convolution1.png" width="500">
 
