@@ -23,11 +23,11 @@ The key aim of the backpropagation derivation is to get from the derivative of t
 - $dw$, the derivative of the loss with respect to the weights in the convolutional layer
 - $db$, the derivatives of the loss with respect to the biases in the convolutional layer
 
-Remember, what is happening 
+Remember how the convolution operation works. For the first observation and first filter, the first entry $y_{11}$ in the output array is obtained by taking the 3D dot product of the weights with the first window in the zero padded input tensor. In Python, this corresponds to
 {% highlight python %}
 output[0, 0, 0, 0] = np.sum(X[0, :, :3, :3] * W[0, :, :, :]) + b[0]
 {% endhighlight %}
-
+It can also be represented for the first dimension of the input depth according to the following diagram.
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 <img src="/images/convolution_basic.png" width="500">
 
