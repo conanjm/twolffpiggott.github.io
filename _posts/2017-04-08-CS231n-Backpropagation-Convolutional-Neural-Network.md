@@ -16,7 +16,9 @@ H_{out} &= (H−HH+2P)/S+1 & W_{out} &= (W−WW+2P)/S+1\\
 \end{align}
 $$
 
-Therefore, convolving over the input volume with the parameters described above involves taking a 3D dot product of the weights with the input volume at each of the $5 \times 5$ positions of the filter with respect to the input. This process is repeated with each of the $F = 2$ different filters, and for each of the $N = 4$ observations, leading to an output volume of size $V = \left(4, 2, 5, 5\right)$.
+Therefore, convolving over the input volume with the parameters described above involves taking a 3D dot product of the weights with the input volume at each of the $5 \times 5$ positions of the filter with respect to the input. This process is repeated with each of the $F = 2$ different filters, and for each of the $N = 4$ observations, leading to an output volume of size $V = \left(4, 2, 5, 5\right)$. Wonderful! This corresponds, as it should, to the dimensions of our upstream derivative $dV$, which is in fact the derivative of the loss with respect to the output volume of the convolutional layer, $\frac{d\mathcal{L}}{dV}$. 
+
+The key aim of the backpropagation derivation is to get from the 
 
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 <img src="/images/convolution1.png" width="500">
