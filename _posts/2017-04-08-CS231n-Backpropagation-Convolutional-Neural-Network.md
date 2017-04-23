@@ -42,5 +42,5 @@ y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i)j}^{(d)}w_{ij}^{(
 \end{align}
 $$
 
-where $xpad_{(1+i)j}^{(d)}$ is the $(1+i)j$th element of the zero-padded input array in the $d$th depth dimension. The only term in the expression for $y_{21}$ that contains $x_{11}^{(1)}$ is obtained at the index $(d=1, i=1, j=2)$, and so the derivative of this term with respect to the input, $\frac{dy_{21}}{dx_{11}^{(1)}}$, is $w_{12}$.
+where $xpad_{(1+i)j}^{(d)}$ is the $(1+i)j$th element of the zero-padded input array in the $d$th depth dimension. The only term in the expression for $y_{21}$ that contains $x_{11}^{(1)}$ is obtained at the index $(d=1, i=1, j=2)$, and so the derivative of this term with respect to the input, $\frac{dy_{21}}{dx_{11}^{(1)}}$, is $w_{12}$. Similarly breaking down the other terms in the activation map that include $x_{11}^{(1)}$ produces $\frac{dy_{11}}{dx_{11}^{(1)}}=w_{22}$, $\frac{dy_{12}}{dx_{11}^{(1)}}=w_{21}$ and $\frac{dy_{22}}{dx_{11}^{(1)}}=w_{11}$.
 
