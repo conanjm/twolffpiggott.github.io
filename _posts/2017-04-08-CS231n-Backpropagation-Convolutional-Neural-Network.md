@@ -49,7 +49,8 @@ We can then use the chain rule to derive an expression for the derivative of the
 $$
 \begin{align}
 \frac{d\mathcal{L}}{dx_{11}^{(1)}} &= \sum_{i,\;j} \frac{d\mathcal{L}}{dy_{ij}^{(1)}} \times \frac{dy_{ij}^{(1)}}{dx_{11}^{(1)}}\\
-&= \frac{d\mathcal{L}}{dy_{11}^{(1)}}\times w_{22}^{(1)} + \frac{d\mathcal{L}}{dy_{12}^{(1)}}\times w_{21}^{(1)} + \frac{d\mathcal{L}}{dy_{21}^{(1)}}\times w_{12}^{(1)} + \frac{d\mathcal{L}}{dy_{22}^{(1)}}\times w_{11}^{(1)}
+&= \frac{d\mathcal{L}}{dy_{11}^{(1)}}\times w_{22}^{(1)} + \frac{d\mathcal{L}}{dy_{12}^{(1)}}\times w_{21}^{(1)} + \frac{d\mathcal{L}}{dy_{21}^{(1)}}\times w_{12}^{(1)} + \frac{d\mathcal{L}}{dy_{22}^{(1)}}\times w_{11}^{(1)}.
 \end{align}
 $$
 
+The key is then to recognise that the above sum corresponds to the application at the first spatial position of the first filter (with inverted weights) to the array of derivatives of the loss with respect to the output of the first filter, with zero padding of one.
