@@ -27,8 +27,10 @@ Remember how the convolution operation works. For the first observation and firs
 {% highlight python %}
 output[0, 0, 0, 0] = np.sum(X[0, :, :3, :3] * W[0, :, :, :]) + b[0]
 {% endhighlight %}
+The operation can be visualised as the sum of 2D dot products across each of the three input dimensions according to the following diagram.
+<img src="/images/3d_dot_index.png" width="700">
+<!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 It can also be represented for the first dimension of the input depth according to the following diagram.
 
-<!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
+
 <img src="/images/convolution_basic.png" width="500">
-<img src="/images/3d_dot_index.png" width="700">
