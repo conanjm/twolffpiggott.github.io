@@ -32,7 +32,7 @@ The operation can be visualised as the sum of 2D dot products across each of the
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 To get to grips with the derivative of the loss with respect to the input of the convolutional layer $dx$, it was most helpful for me to first consider what was happening in the first input dimension, as this pattern repeats symmetrically in the other dimensions of the input depth. Let's start small, and consider the derivative of the loss with respect to the first input in the first depth dimension, $x_{11}^{(1)}$. It's relatively easy to see that given the filter size, stride and padding, there are four terms in the activation map for the first filter that include $x_{11}^{(1)}$: $y_{11}$, $y_{12}$, $y_{21}$ and $y_{22}$. These terms correpond to the application of the first filter at the spatial positions indicated below.
 
-<img src="/images/spatial_positions_dashed.png" >
+<img src="/images/spatial_positions_dashed.png" width="300">
 
 where, $y_{21}$, for instance, corresponds to the application of the first filter at the spatial position defined by the dashed green square. $y_{21}$ is the dot product
 
