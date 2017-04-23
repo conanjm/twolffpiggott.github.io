@@ -48,7 +48,7 @@ We can then use the chain rule to derive an expression for the derivative of the
 
 $$
 \begin{align}
-\frac{d\mathcal{L}}{dx_{11}^{(1)}} &= \sum_{i=1}^2\sum_{j=1}^2 \frac{d\mathcal{L}}{dy_{ij}}\frac{dy_{ij}}{dx_{11}^{(1)}}\\
+\frac{d\mathcal{L}}{dx_{11}^{(1)}} &= \sum_{i,j} \frac{d\mathcal{L}}{dy_{ij}} \times \frac{dy_{ij}}{dx_{11}^{(1)}}\\
 \end{align}
 $$
 
