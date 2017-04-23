@@ -31,4 +31,4 @@ It can also be represented for the first dimension of the input depth according 
 
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
 <img src="/images/convolution_basic.png" width="500">
-<img src="/images/3d_dot_index.png" width="500">
+<img src="/images/3d_dot_index.png" width="700">
