@@ -55,4 +55,4 @@ $$
 
 The key is then to recognise that the above sum corresponds to the application at the first spatial position of the first filter (with inverted weights) to the array of derivatives of the loss with respect to the output of the first filter, with zero padding of one. The diagram below shows this. 
 
-<img src="/images/inverted_filter.png" width="300">
+<img src="/images/inverted_filter.png" width="500">
