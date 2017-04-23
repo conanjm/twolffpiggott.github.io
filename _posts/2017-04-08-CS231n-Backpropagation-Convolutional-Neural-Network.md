@@ -23,33 +23,33 @@ The key aim of the backpropagation derivation is to get from the derivative of t
 - $dw$, the derivative of the loss with respect to the weights in the convolutional layer
 - $db$, the derivatives of the loss with respect to the biases in the convolutional layer
 
-Remember how the convolution operation works. For the first observation and first filter, the first entry $y_{11}$ in the activation map is obtained by taking the 3D dot product of the weights with the first window in the zero padded input tensor. In basic Python, this corresponds to
+Remember how the convolution operation works. For the first observation and first filter, the first entry $y_{11}^{(1)}$ in the activation map is obtained by taking the 3D dot product of the weights with the first window in the zero padded input tensor. In basic Python, this corresponds to
 {% highlight python %}
 output[0, 0, 0, 0] = np.sum(X[0, :, :3, :3] * W[0, :, :, :]) + b[0]
 {% endhighlight %}
 The operation can be visualised as the sum of 2D dot products across each of the three input dimensions according to the following diagram.
 <img src="/images/3d_dot_index.png" width="700">
 <!---![_config.yml]({{ site.baseurl }}/images/convolution1.png)-->
-To get to grips with the derivative of the loss with respect to the input of the convolutional layer $dx$, it was most helpful for me to first consider what was happening in the first input dimension, as this pattern repeats symmetrically in the other dimensions of the input depth. Let's start small, and consider the derivative of the loss with respect to the first input in the first depth dimension, $x_{11}^{(1)}$. It's relatively easy to see that given the filter size, stride and padding, there are four terms in the activation map for the first filter that include $x_{11}^{(1)}$: $y_{11}$, $y_{12}$, $y_{21}$ and $y_{22}$. These terms correspond to the application of the first filter at the spatial positions indicated below.
+To get to grips with the derivative of the loss with respect to the input of the convolutional layer $dx$, it was most helpful for me to first consider what was happening in the first input dimension, as this pattern repeats symmetrically in the other dimensions of the input depth. Let's start small, and consider the derivative of the loss with respect to the first input in the first depth dimension, $x_{11}^{(1)}$. It's relatively easy to see that given the filter size, stride and padding, there are four terms in the activation map for the first filter that include $x_{11}^{(1)}$: $y_{11}^{(1)}$, $y_{12}^{(1)}$, $y_{21}^{(1)}$ and $y_{22}^{(1)}$. These terms correspond to the application of the first filter at the spatial positions indicated below.
 
 <img src="/images/spatial_positions_dashed.png" width="300">
 
-$y_{21}$, for instance, corresponds to the application of the first filter at the spatial position defined by the dashed green square. $y_{21}$ is the dot product
+$y_{21}^{(1)}$, for instance, corresponds to the application of the first filter at the spatial position defined by the dashed green square. $y_{21}^{(1)}$ is the dot product
 
 $$
 \begin{align}
-y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i)j}^{(d)}w_{ij}^{(d)},\\
+y_{21}^{(1)} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i)j}^{(d)}w_{ij}^{(d)},\\
 \end{align}
 $$
 
-where $xpad_{(1+i)j}^{(d)}$ is the $(1+i)j$th element of the zero-padded input array in the $d$th depth dimension. The only term in the expression for $y_{21}$ that contains $x_{11}^{(1)}$ is obtained at the index $(d=1, i=1, j=2)$, and so the derivative of this term with respect to the input, $\frac{dy_{21}}{dx_{11}^{(1)}}$, is $w_{12}^{(1)}$. Similarly breaking down the other terms in the activation map that include $x_{11}^{(1)}$ produces $\frac{dy_{11}}{dx_{11}^{(1)}}=w_{22}^{(1)}$, $\frac{dy_{12}}{dx_{11}^{(1)}}=w_{21}^{(1)}$ and $\frac{dy_{22}}{dx_{11}^{(1)}}=w_{11}^{(1)}$.
+where $xpad_{(1+i)j}^{(d)}$ is the $(1+i)j$th element of the zero-padded input array in the $d$th depth dimension. The only term in the expression for $y_{21}^{(1)}$ that contains $x_{11}^{(1)}$ is obtained at the index $(d=1, i=1, j=2)$, and so the derivative of this term with respect to the input, $\frac{dy_{21}^{(1)}}{dx_{11}^{(1)}}$, is $w_{12}^{(1)}$. Similarly breaking down the other terms in the activation map that include $x_{11}^{(1)}$ produces $\frac{dy_{11}^{(1)}}{dx_{11}^{(1)}}=w_{22}^{(1)}$, $\frac{dy_{12}^{(1)}}{dx_{11}^{(1)}}=w_{21}^{(1)}$ and $\frac{dy_{22}^{(1)}}{dx_{11}^{(1)}}=w_{11}^{(1)}$.
 
 We can then use the chain rule to derive an expression for the derivative of the loss with respect to $x_{11}^{(1)}$ in terms of the convolutional weights and entries in the matrix of the upstream derivatives $\frac{d\mathcal{L}}{dY}$
 
 $$
 \begin{align}
-\frac{d\mathcal{L}}{dx_{11}^{(1)}} &= \sum_{i,\;j} \frac{d\mathcal{L}}{dy_{ij}} \times \frac{dy_{ij}}{dx_{11}^{(1)}}\\
-&= \frac{d\mathcal{L}}{dy_{11}}\times w_{22}^{(1)} + \frac{d\mathcal{L}}{dy_{12}}\times w_{21}^{(1)} + \frac{d\mathcal{L}}{dy_{21}}\times w_{12}^{(1)} + \frac{d\mathcal{L}}{dy_{22}}\times w_{11}^{(1)}
+\frac{d\mathcal{L}}{dx_{11}^{(1)}} &= \sum_{i,\;j} \frac{d\mathcal{L}}{dy_{ij}^{(1)}} \times \frac{dy_{ij}^{(1)}}{dx_{11}^{(1)}}\\
+&= \frac{d\mathcal{L}}{dy_{11}^{(1)}}\times w_{22}^{(1)} + \frac{d\mathcal{L}}{dy_{12}^{(1)}}\times w_{21}^{(1)} + \frac{d\mathcal{L}}{dy_{21}^{(1)}}\times w_{12}^{(1)} + \frac{d\mathcal{L}}{dy_{22}^{(1)}}\times w_{11}^{(1)}
 \end{align}
 $$
 
