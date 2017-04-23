@@ -34,11 +34,11 @@ To get to grips with the derivative of the loss with respect to the input of the
 
 <img src="/images/spatial_positions_dashed.png" width="300">
 
-where, $y_{21}$, for instance, corresponds to the application of the first filter at the spatial position defined by the dashed green square. $y_{21}$ is the dot product
+$y_{21}$, for instance, corresponds to the application of the first filter at the spatial position defined by the dashed green square. $y_{21}$ is the dot product
 
 $$
 \begin{align}
-y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i)(j)}w_{ij}\\
+y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i)(j)}^{(d)}w_{ij}^{(d)}\\
 \end{align}
 $$
 
