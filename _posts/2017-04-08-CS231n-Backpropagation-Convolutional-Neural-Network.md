@@ -56,3 +56,14 @@ $$
 The key is then to recognise that the above sum corresponds to the application at the first spatial position of the first filter (with inverted weights) to the array of derivatives of the loss with respect to the output of the first filter, with zero padding of one. The diagram below shows this, and you can check for yourself that the derivative of the loss with respect to the other inputs correponds to the application of the inverted filter to the zero-padded matrix at different spatial positions.
 
 <img src="/images/inverted_filter.png" width="500">
+
+Naive implementation in python looks like
+{% highlight python %}
+dout_padded = np.pad(dout, ((0,0), (0,0), (conv_param['pad'],conv_param['pad']), (conv_param['pad'],conv_param['pad'])), 'constant')
+  for i in range(N):
+    for j in range(C):
+      for k in range(H):
+        for l in range(W):
+          for m in range(F):
+            dx[i, j, k, l] += np.sum(w[m, j, ::-1, ::-1] * dout_padded[i, m, (conv_param['stride'] * k): (conv_param['stride'] * k + HH), (conv_param['stride'] * l): (conv_param['stride'] * l + WW)])
+{% endhighlight %}
