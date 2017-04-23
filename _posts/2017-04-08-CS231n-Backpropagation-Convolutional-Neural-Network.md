@@ -49,6 +49,7 @@ We can then use the chain rule to derive an expression for the derivative of the
 $$
 \begin{align}
 \frac{d\mathcal{L}}{dx_{11}^{(1)}} &= \sum_{i,\;j} \frac{d\mathcal{L}}{dy_{ij}} \times \frac{dy_{ij}}{dx_{11}^{(1)}}\\
+&= \frac{d\mathcal{L}}{dy_{11}}\times w_{22} + \frac{d\mathcal{L}}{dy_{12}}\times w_{21} + \frac{d\mathcal{L}}{dy_{21}}\times w_{12} + \frac{d\mathcal{L}}{dy_{22}}\times w_{11}
 \end{align}
 $$
 
