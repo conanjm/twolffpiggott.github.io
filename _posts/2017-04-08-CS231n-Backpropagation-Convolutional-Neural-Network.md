@@ -57,7 +57,7 @@ The key is then to recognise that the above sum corresponds to the application a
 
 <img src="/images/inverted_filter.png" width="500">
 
-Naive implementation in python looks is given below. Don't forget we need to reproduce the convolution over all filters, observations and spatial positions.
+Naive implementation in Python is given below. Don't forget we need to reproduce the convolution over all filters, observations and spatial positions.
 {% highlight python %}
 dout_padded = np.pad(dout, ((0,0), (0,0), (conv_param['pad'],conv_param['pad']), (conv_param['pad'],conv_param['pad'])), 'constant')
   for i in range(N):
