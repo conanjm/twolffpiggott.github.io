@@ -38,7 +38,7 @@ where, $y_{21}$, for instance, corresponds to the application of the first filte
 
 $$
 \begin{align}
-y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}\\
+y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i}(j)}W_{ij}\\
 \end{align}
 $$
 
