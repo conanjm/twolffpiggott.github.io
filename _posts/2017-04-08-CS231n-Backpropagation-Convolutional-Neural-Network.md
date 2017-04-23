@@ -53,7 +53,7 @@ $$
 \end{align}
 $$
 
-The key is then to recognise that the above sum corresponds to the application at the first spatial position of the first filter (with inverted weights) to the array of derivatives of the loss with respect to the output of the first filter, with zero padding of one. The diagram below shows this, and you can check for yourself that the derivative of the loss with respect to the other inputs correponds to the application of the inverted filter to the zero-padded matrix at different spatial positions.
+The key is then to recognise that the above sum corresponds to the application at the first spatial position of the first filter (with inverted weights) to the array of derivatives of the loss with respect to the output of the first filter, with zero padding of one. The diagram below shows this, and you can check for yourself that the derivatives of the loss with respect to the other inputs correpond to the application of the inverted filter to the zero-padded matrix at different spatial positions.
 
 <img src="/images/inverted_filter.png" width="500">
 
