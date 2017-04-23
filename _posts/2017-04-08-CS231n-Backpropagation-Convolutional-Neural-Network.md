@@ -38,9 +38,9 @@ $y_{21}$, for instance, corresponds to the application of the first filter at th
 
 $$
 \begin{align}
-y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i)(j)}^{(d)}w_{ij}^{(d)}\\
+y_{21} &= \sum_{d=1}^{3}\sum_{i=1}^{3}\sum_{j=1}^{3}xpad_{(1+i)j}^{(d)}w_{ij}^{(d)},\\
 \end{align}
 $$
-
+where $xpad_{(1+i)j}^{(1)}$ is the $(1_i)j$th elements of the zero-padded input array in the $d$th depth dimension, as referenced in the diagrams.
 It can also be represented for the first dimension of the input depth according to the following diagram.
 %<img src="/images/convolution_basic.png" width="500">
